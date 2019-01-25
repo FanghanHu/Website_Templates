@@ -16,10 +16,72 @@
 
 nav {
     position: fixed;
+    top: 25%;
+    left: 10%;
+}
+
+nav {
+    flex-direction: column;
+    align-items: start;
 }
 
 nav a {
+    flex: 0 0 auto;
+    position: relative;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #888;
+    transition: all 0.7s;
+}
+
+nav a:hover {
     color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px white, -1px -1px 5px #fff5df;
+    transition: all 0.7s;
+}
+
+nav a.active {
+    color: white;
+}
+
+.front {
+    display: inline-block;
+    position: absolute;
+    bottom: 1.2rem;
+    right: 0;
+    width: 0;
+    height: 1px;
+    opacity: 0.2;
+    background-color: white;
+    transition: all 0.7s ease-out;
+}
+
+a.active .front {
+    right: 100%;
+    width: 4rem;
+    opacity: 1;
+    transition: all 0.7s ease-out;
+}
+
+.end {
+    display: inline-block;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    opacity: 0.2;
+    transition: all 0.7s ease-out;
+}
+
+a.active .end {
+    left: 100%;
+    opacity: 1;
+    width: 4rem;
+    transition: all 0.7s ease-out;
 }
 
 .slide {
