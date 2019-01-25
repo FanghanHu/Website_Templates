@@ -1,9 +1,47 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.container-fluid {
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 #browser-check {
     display: none;
+}
+
+nav {
+    position: fixed;
+}
+
+nav a {
+    color: white;
 }
 
 .slide {
     width: 100vw;
     height: 100vh;
-    background-color: bisque;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+
+#slide1 {
+    background-image: url("../images/slide1.jpg");
+}
+
+#slide2 {
+    background-image: url("../images/slide2.jpg");
+}
+
+#slide3 {
+    background-image: url("../images/slide3.jpg");
+}
+
+#slide4 {
+    background-image: url("../images/slide4.jpg");
 }
