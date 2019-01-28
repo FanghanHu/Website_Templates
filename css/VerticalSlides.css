@@ -41,11 +41,13 @@
         padding: 1rem;
     }
     .gallery {
-        column-count: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1rem;
     }
     .gallery img {
         width: 100%;
-        margin-bottom: 0.5rem;
         object-fit: cover;
     }
     @media screen and (max-width: 768px) {
@@ -178,6 +180,4 @@
 #slide1 a {
     font-size: 1.5rem;
     text-decoration: underline;
-}
-#food-gallery {
 }
