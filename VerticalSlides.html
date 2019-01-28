@@ -24,45 +24,114 @@
         Your browser might display this web page incorrectly.
     </div>
 
-    <nav class="nav" id="scroll">
-        <a class="nav-link" href="#slide1"><span class="front"></span>HOME<span class="end"></span></a>
-        <a class="nav-link" href="#slide2"><span class="front"></span>FOOD<span class="end"></span></a>
-        <a class="nav-link" href="#slide3"><span class="front"></span>PLACE<span class="end"></span></a>
-        <a class="nav-link" href="#slide4"><span class="front"></span>LOCATION<span class="end"></span></a>
-    </nav>
+    <div class="container h-100 row" id="nav-container">
+        <nav class="nav col-md-2 row align-self-md-center m-0 p-0" id="scroll">
+            <div class="col-3 col-md-12 d-flex justify-content-center justify-content-md-start">
+                <a class="nav-link" href="#slide1"><span class="front"></span>HOME<span class="end"></span></a>
+            </div>
+            <div class="col-3 col-md-12 d-flex justify-content-center justify-content-md-start">
+                <a class="nav-link" href="#slide2"><span class="front"></span>FOOD<span class="end"></span></a>
+            </div>
+            <div class="col-3 col-md-12 d-flex justify-content-center justify-content-md-start">
+                <a class="nav-link" href="#slide3"><span class="front"></span>PLACE<span class="end"></span></a>
+            </div>
+            <div class="col-3 col-md-12 d-flex justify-content-center justify-content-md-start">
+                <a class="nav-link" href="#slide4"><span class="front"></span>LOCATION<span class="end"></span></a>
+            </div>
+        </nav>
+    </div>
 
     <div class="slide" id="slide1">
-        <h1>Restaurant Name</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Amet animi dicta dolore exercitationem iste quas ratione,
-            recusandae sequi velit vero? Lorem ipsum dolor sit amet.</p>
-        <a>MENU</a>
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-8 offset-2 text-center">
+                    <h1>Restaurant Name</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Amet animi dicta dolore exercitationem iste quas ratione,
+                        recusandae sequi velit vero? Lorem ipsum dolor sit amet.</p>
+                    <a>MENU</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="slide2" class="slide">
-        <div id="slide2-container" class="row">
-            <div class="col-7">
-                <h1>About our food:</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem culpa cum cumque debitis
-                    doloremque dolorum earum eius excepturi, iusto minus nam nobis ratione repudiandae rerum. Architecto,
-                    autem facere illo, non obcaecati quam qui ratione repellendus, sunt suscipit vel voluptatibus. Animi
-                    cupiditate excepturi explicabo odit quas quod sapiente similique veniam.</p>
-            </div>
-            <div class="col-5 grid">
-                <div class="placeholder"></div>
-                <div class="placeholder"></div>
-                <div class="placeholder"></div>
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="content-container col-md-10 offset-md-2 row">
+                    <div class="col-xl-5">
+                        <h1>About our food:</h1>
+                        <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem culpa cum cumque debitis
+                            doloremque dolorum earum eius excepturi, iusto minus nam nobis ratione repudiandae rerum.
+                            Architecto,
+                            autem facere illo, non obcaecati quam qui ratione repellendus, sunt suscipit vel voluptatibus. Animi
+                            cupiditate excepturi explicabo odit quas quod sapiente similique veniam.</p>
+                    </div>
+                    <div class="col-xl-7 d-flex flex-column justify-content-center">
+                        <div class="gallery" id="food-gallery">
+                            <img src="images/food1.jpg">
+                            <img src="images/food2.jpg">
+                            <img src="images/food3.jpg">
+                            <img src="images/food4.jpg">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="slide" id="slide3">
-
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="content-container">
+                <div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                </div>
+                <div>
+                    <h1>Our restaurant: </h1>
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid dolor eius illo illum
+                        laboriosam, nisi odit optio quis reiciendis sint temporibus ullam voluptatem! Cum, debitis dolorem
+                        doloribus eaque eum fugit id magnam nihil nostrum officia quaerat quod recusandae repudiandae rerum
+                        suscipit tempora voluptates? Aliquam amet et illo rerum sed.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="slide" id="slide4">
-
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="content-container">
+                <div class="map">
+                    <div class="placeholder"></div>
+                    <div class="description">
+                        <h5>12345 Bob White Street</h5>
+                        <h5>Houston, TX, 76543</h5>
+                    </div>
+                </div>
+                <div>
+                    <h2>Place an order:</h2>
+                    <h2>(987) 654-4321</h2>
+                    <h3>Business hours:</h3>
+                    <h4>Mon-Fri:</h4>
+                    <h6>11:00am ~ 10:00pm</h6>
+                    <h4>Sat-Sun:</h4>
+                    <h6>11:00am ~ 10:00pm</h6>
+                    <h3>Follow us:</h3>
+                    <div>
+                        <img class="d-inline-block" width="32px" height="32px" src="images/facebook.png">
+                        <img class="d-inline-block" width="32px" height="32px" src="images/twitter.png">
+                        <img class="d-inline-block" width="32px" height="32px" src="images/wechat.png">
+                        <img class="d-inline-block" width="32px" height="32px" src="images/snapchat.png">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

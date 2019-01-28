@@ -1,8 +1,10 @@
-::-webkit-scrollbar {
+/*custom scroll bar*/
+    ::-webkit-scrollbar {
     width: 0;
 }
 
-.container-fluid {
+/*custom bootstrap*/
+    .container-fluid {
     padding: 0;
     height: 100vh;
     overflow: auto;
@@ -10,141 +12,172 @@
     scroll-behavior: smooth;
     color: white;
 }
+    .slide .container {
+        min-height: calc(100% - 3rem);
+    }
 
-#browser-check {
-    display: none;
-}
+/*Utility*/
+    #browser-check {
+        display: none;
+    }
+    .placeholder {
+        background-color: #5a6268;
+    }
+    .slide {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+        padding-top: 3rem;
+        overflow: scroll;
+    }
+    .content-container {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        position: relative;
+        max-height: 100%;
+        padding: 1rem;
+    }
+    .gallery {
+        column-count: 2;
+    }
+    .gallery img {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        object-fit: cover;
+    }
+    @media screen and (max-width: 768px) {
+        .nav {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .content-container {
+            margin:0;
+        }
+        .gallery {
+            column-count: 1;
+        }
+    }
 
-.placeholder {
-    background-color: #5a6268;
-}
+/*backgrounds*/
+    #slide1 {
+        background-image: url("../images/slide1.jpg");
+    }
+    #slide2 {
+        background-image: url("../images/slide2.jpg");
+    }
+    #slide3 {
+        background-image: url("../images/slide3.jpg");
+    }
+    #slide4 {
+        background-image: url("../images/slide4.jpg");
+    }
 
-nav {
-    z-index: 1;
-    position: fixed;
-    top: 25%;
-    left: 10%;
-}
+/*navigation*/
+    #nav-container {
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        visibility: hidden;
+    }
+    nav {
+        visibility: visible;
+        height: 3rem;
+    }
+    nav div {
+        position: relative;
+    }
+    nav a {
+        position: relative;
+        margin: 1rem 0 !important;
+        padding: 0 0.5rem !important;
+        font-size: 1rem;
+        line-height: 1rem;
+        height: 1rem;
+        color: #888;
+        transition: all 0.7s;
+    }
+    nav a:hover {
+        color: white;
+        text-decoration: none;
+        text-shadow: 1px 1px 5px white, -1px -1px 5px #fff5df;
+        transition: all 0.7s;
+    }
+    nav a.active {
+        color: white;
+    }
+    .front {
+        width: 0;
+        left: 0;
+        top: -0.2rem;
 
-nav {
-    flex-direction: column;
-    align-items: start;
-}
+        display: inline-block;
+        position: absolute;
+        height: 1px;
+        opacity: 0.2;
+        background-color: white;
+        transition: all 0.7s ease-out;
+    }
+    a.active .front {
+        width: 100%;
 
-nav a {
-    flex: 0 0 auto;
-    position: relative;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    color: #888;
-    transition: all 0.7s;
-}
+        opacity: 1;
+        transition: all 0.7s ease-out;
+    }
+    .end {
+        width: 0;
+        bottom: -0.2rem;
+        right: 0;
 
-nav a:hover {
-    color: white;
-    text-decoration: none;
-    text-shadow: 1px 1px 5px white, -1px -1px 5px #fff5df;
-    transition: all 0.7s;
-}
+        display: inline-block;
+        position: absolute;
+        background-color: white;
+        height: 1px;
+        opacity: 0.2;
+        transition: all 0.7s ease-out;
+    }
+    a.active .end {
+        width: 100%;
 
-nav a.active {
-    color: white;
-}
-
-.front {
-    display: inline-block;
-    position: absolute;
-    bottom: 1.2rem;
-    right: 0;
-    width: 0;
-    height: 1px;
-    opacity: 0.2;
-    background-color: white;
-    transition: all 0.7s ease-out;
-}
-
-a.active .front {
-    right: 100%;
-    width: 30%;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-}
-
-.end {
-    display: inline-block;
-    position: absolute;
-    bottom: 1.2rem;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: white;
-    opacity: 0.2;
-    transition: all 0.7s ease-out;
-}
-
-a.active .end {
-    left: 100%;
-    opacity: 1;
-    width: 30%;
-    transition: all 0.7s ease-out;
-}
-
-.slide {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    scroll-snap-align: start;
-}
-
-#slide1 {
-    background-image: url("../images/slide1.jpg");
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#slide2 {
-    background-image: url("../images/slide2.jpg");
-}
-
-#slide3 {
-    background-image: url("../images/slide3.jpg");
-}
-
-#slide4 {
-    background-image: url("../images/slide4.jpg");
-}
+        opacity: 1;
+        transition: all 0.7s ease-out;
+    }
+    @media screen and (min-width: 768px) {
+        nav a {
+            font-size: 1.3rem;
+        }
+        .front {
+            bottom: 50%;
+            left: unset;
+            top: unset;
+            right: 0;
+            width: 0;
+        }
+        .end {
+            bottom: 50%;
+            left: 0;
+            width: 0;
+        }
+        a.active .front {
+            right: 100%;
+            width: 2rem;
+        }
+        a.active .end {
+            left: 100%;
+            width: 2rem;
+        }
+    }
 
 #slide1 h1 {
     font-family: satisfy, cursive;
 }
-
-#slide1 p {
-    width: 30rem;
-    margin: 1rem auto;
-}
-
 #slide1 a {
     font-size: 1.5rem;
     text-decoration: underline;
 }
-
-#slide2-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    width: 70vw;
-    position: relative;
-    left: calc(9rem + 10vw);
-    padding: 2rem;
-}
-
-#slide2 .grid {
-    display: grid;
-    grid-auto-columns: 50%;
-    grid-row-gap: 1rem;
-    grid-column-gap: 1rem;
+#food-gallery {
 }
