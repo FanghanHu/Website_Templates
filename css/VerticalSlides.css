@@ -62,6 +62,25 @@
     .wide {
         grid-column: span 2;
     }
+    .vertical-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .map {
+        padding: 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    .map .description {
+        text-align: center;
+        width: 50%;
+        border-radius: 0.5rem 0.5rem 0 0;
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+    }
     @media screen and (max-width: 768px) {
         .nav {
             background-color: rgba(0, 0, 0, 0.7);
